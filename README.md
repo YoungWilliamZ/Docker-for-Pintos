@@ -11,6 +11,22 @@ For easy develop pintos on macOS in CS302 OS 2019 Spring, SUSTech
 
 ### Prerequisite
 
+#### 0. Get pintos source code
+
+You can get the code from your teacher or the stanford official website [pintos.tar.gz](http://www.stanford.edu/class/cs140/projects/pintos/pintos.tar.gz) and put the files like below.
+
+``` bash
+.
+├── Dockerfile
+├── README.md
+├── docker-compose.yml
+├── docker-sync.yml
+└── pintos
+    ├── AUTHORS
+    ├── LICENSE
+    └── src
+```
+
 #### 1. Install docker & docker-compose
 
 - [docker](https://docs.docker.com/install/)
@@ -27,9 +43,6 @@ $ gem install docker-sync
 ``` bash
 $ docker-compose build
 ```
-
-`NOTE` For environment setting, I use [this shell script](https://gist.github.com/minsuu/19a271ccf366e168501685c2bc2d6f03) which is officially provided in class.
-> You can skip this step, if you are not going to create your own image.
 
 ### Start containers
 
@@ -66,6 +79,8 @@ $ docker-sync-stack clean
 ```
 
 ## Official websites
+
+- [Pintos](https://web.stanford.edu/class/cs140/projects/pintos/pintos.html)
 
 - [Docker](https://docs.docker.com/)
 
