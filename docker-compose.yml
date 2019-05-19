@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  dev:
+    build: .
+    container_name: pintos-dev
+    volumes:
+      - pintos-volume:/root/pintos
+    command: gdbgui -r -g /root/pintos/src/utils/pintos-gdb --project /root/pintos/src #--gdb-args="-x /root/pintos/src/misc/gdb-macros"
+    # Sovle: warning: Error disabling address space randomization: Operation not permitted
+    security_opt:
+      - seccomp:unconfined
+    cap_add:
+      - SYS_PTRACE
+    ports:
+      - 5000:5000
+
+volumes:
+  pintos-volume:
+    external: true
